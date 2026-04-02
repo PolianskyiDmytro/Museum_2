@@ -1,0 +1,99 @@
+.subscribe {
+  margin-bottom: 80px;
+
+  @include on-tablet {
+    margin-bottom: 128px;
+  }
+
+  @include on-desktop {
+    margin-bottom: 200px;
+  }
+
+  &__content {
+    @include page-grid;
+  }
+
+  &__title {
+    margin: 0;
+    grid-column: 1 / -1;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 35px;
+    margin-bottom: 20px;
+
+    @include on-tablet {
+      font-size: 40px;
+      line-height: 50px;
+    }
+
+    @include on-desktop {
+      grid-column: span 6;
+      font-size: 48px;
+      line-height: 57.6px;
+      margin-bottom: 50px;
+    }
+  }
+
+  &__desc {
+    margin: 0;
+    grid-column: 1 / -1;
+    color: $black;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    margin-bottom: 50px;
+
+    @include on-tablet {
+      grid-column: 1 / -2;
+    }
+
+    @include on-desktop {
+      grid-column: 7 / -1;
+      margin: 0;
+    }
+  }
+
+  &__form {
+    grid-column: 1 / -1;
+
+    @include page-grid;
+  }
+
+  &__email {
+    grid-column: 1/ -1;
+    font-family: Raleway, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    background-color: $main-bg-color;
+    width: 100%;
+    height: 28px;
+    border: 0;
+    outline: none;
+    border-bottom: 1px solid $black;
+    margin-bottom: 30px;
+
+    @include on-tablet {
+      grid-column: span 4;
+    }
+
+    @include on-desktop {
+      grid-column: span 5;
+    }
+  }
+
+  &__button {
+    grid-column: 1 / -1;
+    cursor: pointer;
+    border: none;
+    outline: none;
+
+    @include on-tablet {
+      grid-column: 1 / 4;
+    }
+
+    @include on-desktop {
+      margin-bottom: 40px;
+    }
+  }
+}

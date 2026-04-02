@@ -7,7 +7,8 @@
 
 @mixin action($_property, $_toValue) {
   transition: #{$_property} 0.3s;
-  &:active, &:focus {
+  &:active,
+  &:focus {
     #{$_property}: $_toValue;
   }
 }

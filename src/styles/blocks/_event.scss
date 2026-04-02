@@ -1,0 +1,100 @@
+.event {
+  grid-column: 1 / -1;
+
+  @include page-grid;
+
+  @include on-tablet {
+    grid-template-rows: 294px 128px;
+  }
+
+  @include on-desktop {
+    grid-template-rows: 244px 231px;
+  }
+
+  &--1 {
+    margin-bottom: 60px;
+
+    @include on-tablet {
+      margin-bottom: 70px;
+    }
+
+    @include on-desktop {
+      margin-bottom: 60px;
+    }
+  }
+
+  &--2 {
+    margin-bottom: 30px;
+
+    @include on-tablet {
+      margin-bottom: 0;
+    }
+  }
+
+  &__img {
+    height: 358px;
+    width: 100%;
+    grid-column: 1 / -1;
+    object-fit: cover;
+    object-position: center;
+
+    @include hover(transform, scale(1.1));
+
+    @include on-tablet {
+      height: 422px;
+      grid-column: 1 / 4;
+      grid-row: 1 / -1;
+    }
+
+    @include on-desktop {
+      height: 475px;
+      grid-column: 1 / 5;
+    }
+  }
+
+  &__info {
+    grid-column: 1 / -1;
+
+    @include page-grid;
+
+    @include on-tablet {
+      --columns: 3;
+
+      grid-column: 4 / -1;
+      grid-row: 1 / 2;
+    }
+
+    @include on-desktop {
+      --columns: 6;
+
+      grid-column: 5 / -3;
+    }
+  }
+
+  &__date {
+    grid-column: 1 / -1;
+  }
+
+  &__title {
+    grid-column: 1 / -1;
+  }
+
+  &__desc {
+    grid-column: 1 / -1;
+    margin-top: 20px;
+  }
+
+  &__button {
+    margin-top: 30px;
+    grid-column: 1 / -1;
+
+    @include on-tablet {
+      margin-top: 40px;
+    }
+
+    @include on-desktop {
+      margin-top: 50px;
+      grid-column: 1 / 4;
+    }
+  }
+}
